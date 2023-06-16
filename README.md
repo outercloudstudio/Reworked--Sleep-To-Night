@@ -10,3 +10,9 @@ Simply sleep in a bed during the day to use the mod!
 
 # What Is Reworked?
 Reworked is a collection of mods I am developing making changes that I believe Minecraft needs.
+
+# Join The Discord
+https://discord.gg/z9GKKaJfhJ
+
+# Mod Packs And YouTube
+Feel free to use this mod in mod packs or YouTube videos! All I ask is that you link to this mod.
