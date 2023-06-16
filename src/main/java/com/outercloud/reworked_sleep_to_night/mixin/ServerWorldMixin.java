@@ -24,7 +24,13 @@ public abstract class ServerWorldMixin {
 
 		if(!getSleepManager().canResetTime(50, instance.getPlayers())) return;
 
-		instance.setTimeOfDay(instance.getTimeOfDay() + 12000L);
+		long timeOfDay = instance.getTimeOfDay();
+
+		if(timeOfDay >= 13000L && timeOfDay < 23000L) {
+			instance.setTimeOfDay(23000L);
+		}else {
+			instance.setTimeOfDay(13000L);
+		}
 
 		InvokeWakeSleepingPlayers();
 	}
