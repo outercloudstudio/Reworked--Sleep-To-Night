@@ -1,36 +1,29 @@
 {
 	"schemaVersion": 1,
-	"id": "reworked",
+	"id": "reworked_sleep_to_night",
 	"version": "${version}",
-	"name": "Reworked",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Reworked: Sleep To Night",
+	"description": "Reworks sleeping in Minecraft to allow you to sleep during day to skip to night! ",
 	"authors": [
-		"Me!"
+		"Outer Cloud"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/outercloudstudio/Reworked--Sleep-To-Night",
+		"sources": "https://github.com/outercloudstudio/Reworked--Sleep-To-Night"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/reworked/icon.png",
+	"icon": "assets/reworked_sleep_to_night/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.outercloud.reworked.Reworked"
+			"com.outercloud.reworked_sleep_to_night.Mod"
 		],
 		"client": [
-			"com.outercloud.reworked.ReworkedClient"
-		],
-		"fabric-datagen": [
-			"com.outercloud.reworked.DataGenerator"
+			"com.outercloud.reworked_sleep_to_night.Client"
 		]
 	},
 	"mixins": [
-		"reworked.mixins.json",
-		{
-			"config": "reworked.client.mixins.json",
-			"environment": "client"
-		}
+		"reworked_sleep_to_night.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.14.21",

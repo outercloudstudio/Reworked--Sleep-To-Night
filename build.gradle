@@ -27,18 +27,6 @@ loom {
 			sourceSet sourceSets.client
 		}
 	}
-    runs {
-		// This adds a new gradle task that runs the datagen API: "gradlew runDatagen"
-		datagen {
-			inherit server
-			name "Data Generation"
-			vmArg "-Dfabric-api.datagen"
-			vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
-			vmArg "-Dfabric-api.datagen.modid=reworked"
- 
-			runDir "build/datagen"
-		}
-	}
 }
 
 // Add the generated resources to the main source set

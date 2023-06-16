@@ -1,4 +1,4 @@
-package com.outercloud.reworked.mixin;
+package com.outercloud.reworked_sleep_to_night.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.injection.At;

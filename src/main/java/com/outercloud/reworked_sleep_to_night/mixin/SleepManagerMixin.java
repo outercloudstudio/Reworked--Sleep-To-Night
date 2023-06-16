@@ -1,4 +1,4 @@
-package com.outercloud.reworked.mixin;
+package com.outercloud.reworked_sleep_to_night.mixin;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.network.ServerPlayerEntity;

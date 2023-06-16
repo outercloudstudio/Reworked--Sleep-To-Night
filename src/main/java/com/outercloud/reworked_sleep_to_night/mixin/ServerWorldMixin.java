@@ -1,4 +1,4 @@
-package com.outercloud.reworked.mixin;
+package com.outercloud.reworked_sleep_to_night.mixin;
 
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.server.world.SleepManager;
@@ -13,7 +13,7 @@ import java.util.function.BooleanSupplier;
 @org.spongepowered.asm.mixin.Mixin(ServerWorld.class)
 public abstract class ServerWorldMixin {
 	@Invoker("wakeSleepingPlayers")
-	public abstract void InvokeWakeSleepingPlayers();
+	abstract void InvokeWakeSleepingPlayers();
 
 	@Accessor
 	abstract SleepManager getSleepManager();

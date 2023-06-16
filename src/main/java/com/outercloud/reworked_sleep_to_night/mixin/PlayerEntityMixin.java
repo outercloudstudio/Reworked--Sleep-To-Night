@@ -1,4 +1,4 @@
-package com.outercloud.reworked.mixin;
+package com.outercloud.reworked_sleep_to_night.mixin;
 
 import net.minecraft.entity.player.PlayerEntity;
 import org.spongepowered.asm.mixin.injection.At;
@@ -10,14 +10,5 @@ public class PlayerEntityMixin {
 	@Inject(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerEntity;wakeUp(ZZ)V", ordinal = 0), cancellable = true)
 	private void preventWakeupBecauseDay(CallbackInfo ci) {
 		ci.cancel();
-	}
-
-	@Inject(method = "wakeUp(ZZ)V", at = @At(value = "HEAD"))
-	private void wakeUp(boolean skipSleepTimer, boolean updateSleepingPlayers, CallbackInfo ci) {
-		try {
-			throw new Error("stack trace");
-		} catch(Error error) {
-			error.printStackTrace();
-		}
 	}
 }
