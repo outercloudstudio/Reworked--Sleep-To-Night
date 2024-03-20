@@ -6,8 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Mod implements ModInitializer {
-	@Override
-	public void onInitialize() {
+	public static final Logger LOGGER = LoggerFactory.getLogger("reworked_sleep_to_night");
 
-	}
+	@Override
+	public void onInitialize() {}
 }

@@ -2,13 +2,14 @@
   "required": true,
   "package": "com.outercloud.reworked_sleep_to_night.mixin",
   "compatibilityLevel": "JAVA_17",
+  "plugin": "com.outercloud.reworked_sleep_to_night.MixinPlugin",
   "mixins": [
-    "Mixin",
     "PlayerEntityAccessorMixin",
     "PlayerEntityMixin",
     "ServerPlayerEntityMixin",
     "ServerWorldMixin",
-    "SleepManagerMixin"
+    "SleepManagerMixin",
+    "compat.travelersbackpack.SleepingBagMixin"
   ],
   "injectors": {
     "defaultRequire": 1

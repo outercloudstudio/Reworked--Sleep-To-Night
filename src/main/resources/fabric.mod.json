@@ -11,7 +11,7 @@
 		"homepage": "https://github.com/outercloudstudio/Reworked--Sleep-To-Night",
 		"sources": "https://github.com/outercloudstudio/Reworked--Sleep-To-Night"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/reworked_sleep_to_night/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -27,7 +27,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.14.21",
-		"minecraft": "~1.20.1",
+		"minecraft": ">=1.20.1",
 		"java": ">=17",
 		"fabric-api": "*"
 	}

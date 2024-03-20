@@ -10,3 +10,6 @@ Simply sleep in a bed during the day to use the mod!
 
 # What Is Reworked?
 Reworked is a collection of mods I am developing making changes that I believe Minecraft needs.
+
+# Compatible Mods
+- Travelers Backpack 
