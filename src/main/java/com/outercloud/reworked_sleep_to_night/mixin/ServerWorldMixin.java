@@ -1,5 +1,6 @@
 package com.outercloud.reworked_sleep_to_night.mixin;
 
+import com.outercloud.reworked_sleep_to_night.Mod;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.server.world.SleepManager;
 import org.spongepowered.asm.mixin.gen.Accessor;
@@ -26,10 +27,10 @@ public abstract class ServerWorldMixin {
 
 		long timeOfDay = instance.getTimeOfDay();
 
-		if(timeOfDay >= 13000L && timeOfDay < 23000L) {
-			instance.setTimeOfDay(23000L);
+		if(timeOfDay % 24000L >= 13000L && timeOfDay % 24000L < 23000L) {
+			instance.setTimeOfDay(timeOfDay / 24000L * 24000L + 23000L);
 		}else {
-			instance.setTimeOfDay(13000L);
+			instance.setTimeOfDay((timeOfDay / 24000L + 1) * 24000L + 13000L);
 		}
 
 		InvokeWakeSleepingPlayers();
