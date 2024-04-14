@@ -27,10 +27,14 @@ public abstract class ServerWorldMixin {
 
 		long timeOfDay = instance.getTimeOfDay();
 
-		if(timeOfDay % 24000L >= 13000L && timeOfDay % 24000L < 23000L) {
-			instance.setTimeOfDay(timeOfDay / 24000L * 24000L + 23000L);
-		}else {
-			instance.setTimeOfDay((timeOfDay / 24000L + 1) * 24000L + 13000L);
+		if(Mod.timeAdvanceMode == Mod.TimeAdvanceMode.Absolute) {
+			if(timeOfDay % 24000L >= Mod.sunset && timeOfDay % 24000L < Mod.sunrise) {
+				instance.setTimeOfDay(timeOfDay / 24000L * 24000L + Mod.sunrise);
+			}else {
+				instance.setTimeOfDay((timeOfDay / 24000L + 1) * 24000L + Mod.sunset);
+			}
+		} else {
+			instance.setTimeOfDay(timeOfDay + Mod.advance);
 		}
 
 		InvokeWakeSleepingPlayers();
